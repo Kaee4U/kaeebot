@@ -10,5 +10,9 @@ module.exports = {
         }else{
             message.reply("Kamu gabisa ban badut itu");
         }
+        var role = message.member.role.cache.find(r =r.name === "CEO")
+        if(!role){
+            return message.reply("Kamu gapunya akses untuk ban");
+        }
     }
 }
