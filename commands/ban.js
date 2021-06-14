@@ -1,7 +1,7 @@
 module.exports = {
-    name: 'hai',
-    description: "hai command!",
-    execute(message, args){
+    name: 'ban',
+    description: "ban command!",
+    run: async (client, message, args) => {
         if (!message.member.permission.has("Ban Member")) return;
 
         const member = message.mentions.member.first();
