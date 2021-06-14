@@ -40,6 +40,28 @@ client.on('message', message =>{
     } 
     if(command === 'help'){
         client.commands.get('help').execute(message, args, Discord);
+    }else if(command === 'ban'){
+        var role = message.member.roles.cache.find(r => r.name === "CEO")
+    }else if(!role){
+        return message.reply("Kamu gapunya akses buat ban member")
+    }else {
+        const userBan = message.mentions.first();
+
+        if(userBan){
+            const memberBan = message.guild.member(userBan);
+
+            if(memberBan){
+                memberBan.ban({
+                    reason: 'Kamu tidak mematuhi rules'
+                }).then(() => {
+                    message.reply(`${userBan} sudah berhasil di ban kakak`);
+                }).catch(console.error);
+            }else {
+                message.reply("Badut tersebut tidak ada di server ini");
+            }
+        }else {
+            message.reply("Silahkan mention badut yang di ban");
+        }
     }
   
 
