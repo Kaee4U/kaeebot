@@ -4,7 +4,7 @@ module.exports = {
     execute(message, args){
         const member = message.mentions.users.first();
         if(member){
-            const memberTarger = message.guild.member.cache.get(member.id);
+            const memberTarger = message.guild.members.cache.get(member.id);
             memberTarger.ban();
             message.reply("Badut itu telah di ban");
         }else{
