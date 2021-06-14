@@ -31,11 +31,14 @@ client.on('message', message =>{
     
     if(command === 'ping'){
         client.commands.get('ping').execute(message, args);
-    } else if (command === 'hai'){
+    }
+    if (command === 'hai'){
         client.commands.get('hai').execute(message, args);
-    } else if (command === 'kamuganteng'){
+    }
+    if (command === 'kamuganteng'){
         client.commands.get('kamuganteng').execute(message, args);
-    } else if (command === 'paptt'){
+    }
+    if (command === 'paptt'){
         client.commands.get('paptt').execute(message, args);
     } 
     if(command === 'help'){
