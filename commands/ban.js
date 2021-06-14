@@ -2,7 +2,7 @@ module.exports = {
     name: 'ban',
     description: "ban command!",
     run: async (client, message, args) => {
-        if (!message.member.permission.has("Ban Member")) return;
+        if (!message.member.permission.has("BAN_MEMBERS")) return;
 
         const member = message.mentions.member.first();
         if (!member) return message.reply("Tolong mention badutnya");
