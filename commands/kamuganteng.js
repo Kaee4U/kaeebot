@@ -1,7 +1,7 @@
 module.exports= {
     name:'kamuganteng',
     description:'kamu ganteng command!',
-    execute(message, args){
+    run : async(message, args) => {
         message.channel.send('aku cewe 😊');
     }
 }
