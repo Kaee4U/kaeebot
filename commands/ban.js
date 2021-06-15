@@ -1,6 +1,7 @@
+const {client, message, messageembed} = require("discord.js")
+
 module.exports = {
     name: 'ban',
-    description: "ban command!",
     run: async (client, message, args) => {
         if (!message.member.permission.has("BAN_MEMBERS")) return;
 
