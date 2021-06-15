@@ -1,6 +1,6 @@
 module.exports = {
     name: 'paptt',
-    run : async(message, args) => {
+    run : async(client, message, args) => {
         message.reply('kamu horny 😡');
 
     }
