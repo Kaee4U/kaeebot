@@ -14,6 +14,7 @@
   "author": "Kaee",
   "license": "ISC",
   "dependencies": {
+    "@iamtraction/google-translate": "^1.1.2",
     "ascii-table": "^0.0.9",
     "discord.js": "^12.5.3",
     "translate-google": "^1.4.3"

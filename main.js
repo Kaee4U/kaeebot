@@ -23,31 +23,19 @@ client.once('ready', () => {
     }).catch(console.error);
 });
 
-client.on('message', message =>{
-    if(!message.content.startsWith(prefix) || message.author.bot) return;
-
-    const args = message.content.slice(prefix.length).split(/ +/);
-    const command = args.shift().toLowerCase();
-    
-    if(command === 'ping'){
-        client.commands.get('ping').execute(message, args);
-    }
-    if (command === 'hai'){
-        client.commands.get('hai').execute(message, args);
-    }
-    if (command === 'kamuganteng'){
-        client.commands.get('kamuganteng').execute(message, args);
-    }
-    if (command === 'paptt'){
-        client.commands.get('paptt').execute(message, args);
-    } 
-    if(command === 'help'){
-        client.commands.get('help').execute(message, args, Discord);
-    }
+client.on('message', async message =>{
+    if(message.author.bot) return;
+    if(!message.content.startsWith(prefix)) return;
+    if(!message.guild) return;
+    if(!message.member) message.member = await message.guild.fetchMember(message);
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const cmd = args.shift().toLowerCase();
+    if(cmd.length == 0 ) return;
+    let command = client.commands.get(cmd)
+    if(!command) command = client.commands.get(client.aliases.get(cmd));
+    if(command) command.run(client, message, args) 
    
   
-
-
 });
 
 client.login('ODUzNDYzNzA2NzMyODU1MzQ3.YMVwBA.KO2yFmZYqDBiFrM2Lg3TljAs1gY');
