@@ -10,7 +10,7 @@ module.exports = {
 
         if (
             message.member.roles.highest.position <= 
-            member.roles.highes.position
+            member.roles.highest.position
             ) 
                 return message.reply ("Role kamu terlalu rendah/sama dengan role yang ingin kamu ban");
 
