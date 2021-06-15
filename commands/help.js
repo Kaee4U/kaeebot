@@ -9,7 +9,7 @@ module.exports = {
         .setDescription ('ADA BEBERAPA COMMAND YANG BISA DIGUNAKAN')
         .addFields(
             {name:'Command 1', value:'*hai'},
-            {name:'Command 2', value:'*kamuganteng'},
+            {name:'Command 2', value:'*itusiapa'},
             {name:'Command 3', value:'*paptt'},
             {name:'Command 4', value:'*ping'},
             {name:'Command 5', value:'*translate'},
