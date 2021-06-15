@@ -2,8 +2,7 @@ const {MessageEmbed} = require('discord.js');
 
 module.exports = {
     name:'help',
-    description:'Embeds!',
-    run : async (client, message) => {
+    run : async(client, message) => {
         const embed = new MessageEmbed()
         .setColor('#ee3b3b')
         .setTitle ('INFO COMMAND')
@@ -18,6 +17,6 @@ module.exports = {
         .setImage('https://cdn.discordapp.com/attachments/391767928749686794/853499735122116628/FB_IMG_1623560580121.jpg')
         .setFooter('Sekian')
 
-        message.channel.send(newEmbed);
+        message.channel.send(embed);
     }
 }
