@@ -1,7 +1,7 @@
 module.exports = {
     name:'help',
     description:'Embeds!',
-    execute(message, args, Discord){
+    run : async (message, args, Discord) => {
         const newEmbed = new Discord.MessageEmbed()
         .setColor('#ee3b3b')
         .setTitle ('INFO COMMAND')
@@ -11,6 +11,7 @@ module.exports = {
             {name:'Command 2', value:'*kamuganteng'},
             {name:'Command 3', value:'*paptt'},
             {name:'Command 4', value:'*ping'},
+            {name:'Command 5', value:'*translate'}
         )
         .setImage('https://cdn.discordapp.com/attachments/391767928749686794/853499735122116628/FB_IMG_1623560580121.jpg')
         .setFooter('Sekian')
