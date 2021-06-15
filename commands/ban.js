@@ -3,7 +3,7 @@ const {Client, Message, MessageEmbed} = require("discord.js")
 module.exports = {
     name: "ban",
     run: async (client, message, args) => {
-        if (!message.member.permission.has("BAN_MEMBERS")) return;
+        if (!message.member.hasPermission('BAN_MEMBERS')) return;
 
         const member = message.mentions.members.first();
         if (!member) return message.reply("Tolong mention badutnya");
