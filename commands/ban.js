@@ -14,9 +14,9 @@ module.exports = {
             ) 
                 return message.reply ("Role kamu terlalu rendah/sama dengan role yang ingin kamu ban");
 
-        const reason = args.slice(1).join(" ") || "Di ban karena ga tulen";
+        const reason = args.slice(1).join(" ") || "ga tulen";
 
         member.ban({reason});
-        message.channel.send(`Banned ${member} for ${reason}`)
+        message.channel.send(`Banned ${member} karena ${reason}`)
     },
 };
