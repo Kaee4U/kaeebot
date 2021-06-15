@@ -1,7 +1,9 @@
+const {MessageEmbed} = require('discord.js');
+
 module.exports = {
     name:'help',
     description:'Embeds!',
-    run : async (message, args, Discord) => {
+    run : async (client, message, args, Discord) => {
         const newEmbed = new Discord.MessageEmbed()
         .setColor('#ee3b3b')
         .setTitle ('INFO COMMAND')
